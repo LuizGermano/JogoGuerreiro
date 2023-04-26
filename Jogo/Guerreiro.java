@@ -65,6 +65,14 @@ public class Guerreiro {
         }
         
     }
+    public boolean ataque(Guerreiro guerreiro){
+        if(this.arma != && !guerreiro.isArmadura()){
+            guerreiro.setEnergia(guerreiro.getEnergia() - 1);
+            return true;
+        }else{
+            return false;
+        }
+    }
     public boolean atacar(Guerreiro guerreiro){
         if(this.arma != null && !guerreiro.isArmadura()){
             guerreiro.setEnergia(guerreiro.getEnergia() - 10);            
